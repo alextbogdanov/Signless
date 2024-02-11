@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signless - Audio to Sign Language Converter</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .banner {
+            background-color: #007BFF;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .content {
+            padding: 20px;
+            padding-bottom: 100px; /* Added padding to accommodate the footer */
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative; /* Changed to relative for demonstration */
+            width: 100%;
+        }
+        .faq-question {
+            cursor: pointer;
+            margin: 10px 0;
+        }
+        .faq-answer {
+            display: none;
+            margin: 0 0 10px 20px;
+        }
+        .video-section {
+            display: flex;
+            justify-content: center; /* Centers content horizontally */
+            align-items: center; /* Centers content vertically if needed */
+            flex-direction: column; /* Stacks items vertically */
+            margin-top: 20px;
+        }
+        video {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+<div class="banner animate__animated animate__fadeIn">
+    <h1>Signless</h1>
+    <p>Bringing Audio to Life with Sign Language</p>
+</div>
+
+<div class="content">
+    <h2>About Signless</h2>
+    <p>Signless is a cutting-edge application designed to make audio content accessible to the deaf and hard of hearing community by converting spoken language into sign language. Utilizing advanced AI and machine learning technologies, Signless captures audio inputs and translates them into accurate sign language gestures displayed through an avatar.</p>
+    
+    <h2>Features</h2>
+    <ul>
+        <li>Real-time audio to sign language translation</li>
+        <li>Support for multiple languages (Spanish, Portuguese, etc.)</li>
+        <li>Intuitive user interface for easy operation</li>
+        <li>High accuracy translations powered by AI</li>
+    </ul>
+
+    <h2>Video Demonstration</h2>
+    <div class="video-section">
+            <video controls>
+                <source src="video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+       <p>Discover how Signless transforms spoken language into sign language, making audio content accessible to everyone.</p>
+   	</div>
+
+    <h2>License</h2>
+    <div class="license-section">
+        <p>Signless is made available under the MIT License, allowing it to be freely used, modified, and distributed.</p>
+        <pre>
+MIT License
+
+Copyright (c) 2024 Signless
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+...
+        </pre>
+    </div>
+</div>
+
+<div class="footer">
+    <p>&copy; 2024 Signless. All rights reserved.</p>
+</div>
+
+<script>
+    document.querySelectorAll('.faq-question').forEach(item => {
+        item.addEventListener('click', () => {
+            const answer = item.nextElementSibling;
+            answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+        });
+    });
+
+    document.querySelector('.subscribe-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Thank you for subscribing!');
+        this.reset();
+    });
+</script>
+
+</body>
+</html>
