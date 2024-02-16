@@ -5,8 +5,8 @@ require('dotenv').config();
 
 // OPENAI CONFIGURATION
 const openai = new OpenAI({
-	organization: process.env.OPENAI_ORGANIZATION_KEY,
-	apiKey: process.env.OPENAI_API_KEY
+	organization: '',
+	apiKey: ''
 });
 
 // OPENAI API CALL
@@ -15,6 +15,7 @@ const convertAudioToText = async (req, res) => {
 	if (req.file) {
 		// Processing OpenAI request
 		const filePath = req.file.path;
+		console.log(filePath)
 		try {
 			const translation = await openai.audio.translations.create({
 				file: fs.createReadStream(filePath),

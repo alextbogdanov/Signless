@@ -5,16 +5,22 @@
       "bundler": "metro"
     },
     "plugins": [
-      "expo-router"
+      "expo-router",
+      [
+        "expo-av",
+        {
+          "microphonePermission": "Allow Signless to access your microphone."
+        }
+      ]
     ],
-    "name": "MLS",
-    "slug": "MLS",
+    "name": "Signless",
+    "slug": "Signless",
     "android": {
-      "package": "com.hackathon.mls"
+      "package": "com.hackathon.signless"
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.hackathon.mls"
+      "bundleIdentifier": "com.hackathon.signless"
     }
   }
 }

@@ -1,18 +1,16 @@
 // IMPORTS
 const express = require('express');
 const multer = require('multer');
-const jwt = require('jsonwebtoken');
 require('dotenv').config();
 const { convertAudioToText } = require('./controllers/openAIController.js');
 
 // CONSTANTS
-const JWT_TOKEN = process.env.JWT_SECRET;
 const storage = multer.diskStorage({
 	destination: function(req, file, cb) {
 		cb(null, 'uploads/');
 	},
 	filename: function(req, file, cb) {
-		cb(null, file.fieldname + '-' + Date.now() + '.m4a');
+		cb(null, file.fieldname + '-' + Date.now() + '.mp3');
 	}
 });
 const upload = multer({ storage: storage });

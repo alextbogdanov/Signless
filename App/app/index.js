@@ -1,13 +1,11 @@
 // IMPORTS
-import { Stack,useRouter } from 'expo-router';
+import { Stack, useRouter } from 'expo-router';
 import { SafeAreaView, View, Text } from 'react-native';
-
-// CONSTANTS
-import colors from '../constants/colors';
 
 // HOMESCREEN
 const Home = () => {
   // Hooks
+
   const router = useRouter();
 
   return (
